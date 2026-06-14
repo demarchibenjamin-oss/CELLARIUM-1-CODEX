@@ -28,3 +28,7 @@ Les donnees sont stockees localement dans `localStorage`.
 - Note personnelle modifiable
 
 Les autres ecrans ne sont pas developpes dans ce lot.
+
+## Important
+
+Les images de `assets/reference` sont utilisees comme fonds officiels de l'interface. Elles doivent etre presentes dans le depot pour GitHub Pages.
