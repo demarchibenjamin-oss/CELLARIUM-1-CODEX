@@ -28,8 +28,6 @@ textarea {
   width: 100vw;
   min-height: 100vh;
   min-height: 100svh;
-  display: grid;
-  place-items: center;
   background: #050201;
 }
 
@@ -47,7 +45,7 @@ textarea {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   user-select: none;
   pointer-events: none;
@@ -64,10 +62,41 @@ textarea {
 }
 
 .hotspot:focus-visible,
+.screen-back:focus-visible,
 .reference-input:focus,
 .reference-note:focus {
   outline: 2px solid rgba(231, 186, 91, 0.9);
   outline-offset: 2px;
+}
+
+.screen-back {
+  position: absolute;
+  z-index: 6;
+  left: max(12px, env(safe-area-inset-left));
+  top: max(12px, env(safe-area-inset-top));
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(225, 184, 95, 0.75);
+  border-radius: 50%;
+  color: #f1d58d;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 235, 175, 0.26), transparent 30%),
+    linear-gradient(145deg, rgba(55, 22, 12, 0.92), rgba(13, 5, 3, 0.88));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(80, 35, 15, 0.75);
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.screen-back::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateX(2px) rotate(45deg);
 }
 
 .settings-hotspot {
@@ -197,30 +226,6 @@ textarea {
   pointer-events: none;
 }
 
-.selected-bottle {
-  position: absolute;
-  z-index: 4;
-  left: 11%;
-  top: 17%;
-  width: 34%;
-  color: #241207;
-  text-align: center;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-.selected-bottle strong {
-  display: block;
-  font-size: clamp(12px, 2vw, 22px);
-  line-height: 1.05;
-}
-
-.selected-bottle span {
-  display: block;
-  margin-top: 3px;
-  font-size: clamp(7px, 1vw, 11px);
-}
-
 .reference-note {
   position: absolute;
   z-index: 4;
@@ -312,8 +317,9 @@ textarea {
   font-weight: 700;
 }
 
-@media (orientation: portrait) {
-  .reference-bg {
-    object-fit: contain;
+@media (max-width: 560px) {
+  .screen-back {
+    width: 38px;
+    height: 38px;
   }
 }

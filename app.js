@@ -20,6 +20,7 @@ const seedBottles = [
 
 let bottles = loadBottles();
 let screen = "home";
+let previousScreen = "home";
 let selectedBottleId = bottles[0].id;
 let query = "";
 
@@ -60,6 +61,21 @@ function renderHome() {
   `;
 }
 
+function goTo(nextScreen) {
+  if (screen !== nextScreen) {
+    previousScreen = screen;
+    screen = nextScreen;
+  }
+  render();
+}
+
+function goBack(fallback = "home") {
+  const destination = previousScreen && previousScreen !== screen ? previousScreen : fallback;
+  previousScreen = screen;
+  screen = destination;
+  render();
+}
+
 function renderCave() {
   const visible = bottles.filter((bottle) =>
     `${bottle.nom} ${bottle.millesime} ${bottle.region}`.toLowerCase().includes(query.toLowerCase())
@@ -68,6 +84,7 @@ function renderCave() {
   return `
     <main class="reference-screen" aria-label="Cave Cellarium">
       ${referenceImage("cave", "Maquette officielle cave Cellarium")}
+      <button class="screen-back" type="button" aria-label="Retour a l'ecran precedent"></button>
       <button class="hotspot settings-hotspot" type="button" aria-label="Settings"></button>
       <button class="hotspot cave-tab-hotspot" type="button" aria-label="Cave"></button>
       <input class="reference-input" id="search" value="${escapeAttr(query)}" aria-label="Recherche">
@@ -98,15 +115,12 @@ function renderDetail() {
   return `
     <main class="reference-screen" aria-label="Fiche bouteille Cellarium">
       ${referenceImage("detail", "Maquette officielle fiche bouteille Cellarium")}
+      <button class="screen-back" type="button" aria-label="Retour a l'ecran precedent"></button>
       <button class="hotspot back-hotspot" type="button" aria-label="Retour Cave"></button>
       <button class="hotspot settings-hotspot" type="button" aria-label="Settings"></button>
       <button class="hotspot stock-minus-hotspot" type="button" aria-label="Retirer une bouteille"></button>
       <button class="hotspot stock-plus-hotspot" type="button" aria-label="Ajouter une bouteille au stock"></button>
       <output class="stock-value">${bottle.stock}</output>
-      <div class="selected-bottle">
-        <strong>${escapeHtml(bottle.nom)}</strong>
-        <span>${escapeHtml(bottle.millesime)} - ${escapeHtml(bottle.region)}</span>
-      </div>
       <textarea class="reference-note" id="note" aria-label="Note">${escapeHtml(bottle.note)}</textarea>
       ${["degustations", "souvenirs", "compagnons", "associations", "pantheon", "destins"].map((name, index) => `
         <button class="hotspot side-tab side-tab-${index + 1}" type="button" aria-label="${name}"></button>
@@ -117,18 +131,19 @@ function renderDetail() {
 
 function bindEvents() {
   document.querySelector(".settings-hotspot")?.addEventListener("click", () => {
-    screen = "home";
-    render();
+    goTo("home");
   });
 
   document.querySelector(".enter-hotspot")?.addEventListener("click", () => {
-    screen = "cave";
-    render();
+    goTo("cave");
   });
 
   document.querySelector(".back-hotspot")?.addEventListener("click", () => {
-    screen = "cave";
-    render();
+    goTo("cave");
+  });
+
+  document.querySelector(".screen-back")?.addEventListener("click", () => {
+    goBack(screen === "detail" ? "cave" : "home");
   });
 
   document.querySelector("#search")?.addEventListener("input", (event) => {
@@ -142,8 +157,7 @@ function bindEvents() {
   document.querySelectorAll("[data-bottle]").forEach((button) => {
     button.addEventListener("click", () => {
       selectedBottleId = button.dataset.bottle;
-      screen = "detail";
-      render();
+      goTo("detail");
     });
   });
 
@@ -168,8 +182,7 @@ function bindEvents() {
     bottles.push(bottle);
     selectedBottleId = bottle.id;
     saveBottles();
-    screen = "detail";
-    render();
+    goTo("detail");
   });
 
   document.querySelector(".stock-minus-hotspot")?.addEventListener("click", () => changeStock(-1));
