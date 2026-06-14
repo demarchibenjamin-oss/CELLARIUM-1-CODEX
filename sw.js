@@ -1,11 +1,14 @@
-const CACHE_NAME = "cellarium-reference-v2-cache";
+const CACHE_NAME = "cellarium-reference-v3-cache";
 const ASSETS = [
   "./",
   "./index.html",
   "./style.css",
   "./app.js",
   "./manifest.json",
-  "./icon.svg"
+  "./icon.svg",
+  "./assets/reference/01%20ACCUEIL%20REFERENCE.PNG",
+  "./assets/reference/02%20CAVE%20REFERENCE.PNG",
+  "./assets/reference/03%20FICHE%20BOUTEILLE%20REFERENCE.PNG"
 ];
 
 self.addEventListener("install", (event) => {
