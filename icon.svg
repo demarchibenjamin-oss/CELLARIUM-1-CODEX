@@ -1,17 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <radialGradient id="bg" cx="50%" cy="35%" r="70%">
-      <stop offset="0" stop-color="#6d1d25"/>
-      <stop offset="1" stop-color="#160807"/>
-    </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f2d27a"/>
-      <stop offset="1" stop-color="#8a641d"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="92" fill="url(#bg)"/>
-  <path d="M112 92h288v328H112z" fill="#2b130e" stroke="url(#gold)" stroke-width="18"/>
-  <path d="M162 126h58v262h-58zM238 126h42v262h-42zM298 126h52v262h-52z" fill="#5a211b" stroke="#c9a24a" stroke-width="8"/>
-  <path d="M216 104c18 36 18 71 0 106-18-35-18-70 0-106z" fill="#e6c56a"/>
-  <text x="256" y="458" text-anchor="middle" font-family="Georgia, serif" font-size="58" font-weight="700" fill="#efd27b">C</text>
+  <image href="icon.png" width="512" height="512" preserveAspectRatio="xMidYMid slice"/>
 </svg>

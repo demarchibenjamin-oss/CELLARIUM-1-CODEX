@@ -40,8 +40,8 @@ textarea {
   height: 100dvh;
   overflow: hidden;
   background: #050201;
-  --reference-shift: -16.28%;
-  --reference-height: 116.28%;
+  --reference-shift: -8.1%;
+  --reference-height: 108.1%;
 }
 
 .reference-bg {
@@ -57,14 +57,14 @@ textarea {
 }
 
 .screen-home {
-  --reference-shift: -15.61%;
-  --reference-height: 115.61%;
+  --reference-shift: -7.45%;
+  --reference-height: 107.45%;
 }
 
 .screen-cave,
 .screen-detail {
-  --reference-shift: -16.55%;
-  --reference-height: 116.55%;
+  --reference-shift: -8.1%;
+  --reference-height: 108.1%;
 }
 
 .hotspot {
@@ -117,7 +117,7 @@ textarea {
 
 .settings-hotspot {
   left: 3%;
-  top: 2%;
+  top: 3%;
   width: 8%;
   height: 9%;
   border-radius: 50%;
@@ -133,7 +133,7 @@ textarea {
 
 .cave-tab-hotspot {
   left: 2%;
-  top: 15%;
+  top: 20%;
   width: 18%;
   height: 8%;
 }
@@ -186,7 +186,7 @@ textarea {
   position: absolute;
   z-index: 4;
   left: 0;
-  top: 9%;
+  top: 10%;
   width: 100%;
   height: 6.5%;
   border: 0;
@@ -207,7 +207,7 @@ textarea {
 
 .back-hotspot {
   left: 1%;
-  top: 2%;
+  top: 3%;
   width: 10%;
   height: 9%;
   border-radius: 50%;
@@ -215,7 +215,7 @@ textarea {
 
 .stock-minus-hotspot {
   left: 58%;
-  top: 18%;
+  top: 25%;
   width: 8%;
   height: 6.5%;
   border-radius: 50%;
@@ -223,7 +223,7 @@ textarea {
 
 .stock-plus-hotspot {
   left: 91%;
-  top: 18%;
+  top: 25%;
   width: 8%;
   height: 6.5%;
   border-radius: 50%;
@@ -233,7 +233,7 @@ textarea {
   position: absolute;
   z-index: 4;
   left: 66%;
-  top: 18.3%;
+  top: 25.3%;
   width: 10%;
   color: #2b160b;
   text-align: center;
@@ -246,7 +246,7 @@ textarea {
   position: absolute;
   z-index: 4;
   left: 48%;
-  top: 57%;
+  top: 63%;
   width: 34%;
   height: 14%;
   border: 0;
