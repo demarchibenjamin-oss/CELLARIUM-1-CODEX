@@ -5,10 +5,11 @@
 html,
 body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   overflow: hidden;
   background: #050201;
+  overscroll-behavior: none;
 }
 
 body,
@@ -26,8 +27,9 @@ textarea {
 
 .app-shell {
   width: 100vw;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   background: #050201;
 }
 
@@ -35,20 +37,34 @@ textarea {
   position: relative;
   width: 100vw;
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   background: #050201;
+  --reference-shift: -16.28%;
+  --reference-height: 116.28%;
 }
 
 .reference-bg {
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: var(--reference-shift);
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: var(--reference-height);
+  object-fit: fill;
   object-position: center;
   user-select: none;
   pointer-events: none;
+}
+
+.screen-home {
+  --reference-shift: -15.61%;
+  --reference-height: 115.61%;
+}
+
+.screen-cave,
+.screen-detail {
+  --reference-shift: -16.55%;
+  --reference-height: 116.55%;
 }
 
 .hotspot {
@@ -101,54 +117,54 @@ textarea {
 
 .settings-hotspot {
   left: 3%;
-  top: 9%;
+  top: 2%;
   width: 8%;
   height: 9%;
   border-radius: 50%;
 }
 
 .enter-hotspot {
-  left: 39%;
-  top: 84%;
-  width: 38%;
-  height: 11%;
+  left: 0;
+  top: 87%;
+  width: 100%;
+  height: 12%;
   border-radius: 999px;
 }
 
 .cave-tab-hotspot {
   left: 2%;
-  top: 27%;
+  top: 15%;
   width: 18%;
   height: 8%;
 }
 
 .book-hotspot {
-  width: 12%;
-  height: 31%;
+  width: 18%;
+  height: 25%;
 }
 
 .book-1,
 .book-6 {
-  left: 24%;
+  left: 0;
 }
 
 .book-2,
 .book-7 {
-  left: 37%;
+  left: 20%;
 }
 
 .book-3,
 .book-8 {
-  left: 50%;
+  left: 40%;
 }
 
 .book-4,
 .book-9 {
-  left: 63%;
+  left: 60%;
 }
 
 .book-5 {
-  left: 76%;
+  left: 80%;
 }
 
 .book-1,
@@ -156,22 +172,22 @@ textarea {
 .book-3,
 .book-4,
 .book-5 {
-  top: 25%;
+  top: 27%;
 }
 
 .book-6,
 .book-7,
 .book-8,
 .book-9 {
-  top: 59%;
+  top: 57%;
 }
 
 .reference-input {
   position: absolute;
   z-index: 4;
-  left: 24%;
-  top: 9.7%;
-  width: 74%;
+  left: 0;
+  top: 9%;
+  width: 100%;
   height: 6.5%;
   border: 0;
   padding: 0 2.5%;
@@ -182,33 +198,33 @@ textarea {
 }
 
 .add-bottle-hotspot {
-  left: 76%;
-  top: 86%;
-  width: 22%;
+  left: 70%;
+  top: 87%;
+  width: 30%;
   height: 11%;
   border-radius: 8px;
 }
 
 .back-hotspot {
   left: 1%;
-  top: 8%;
+  top: 2%;
   width: 10%;
   height: 9%;
   border-radius: 50%;
 }
 
 .stock-minus-hotspot {
-  left: 59.5%;
-  top: 30%;
-  width: 5.5%;
+  left: 58%;
+  top: 18%;
+  width: 8%;
   height: 6.5%;
   border-radius: 50%;
 }
 
 .stock-plus-hotspot {
-  left: 71.5%;
-  top: 30%;
-  width: 5.5%;
+  left: 91%;
+  top: 18%;
+  width: 8%;
   height: 6.5%;
   border-radius: 50%;
 }
@@ -216,9 +232,9 @@ textarea {
 .stock-value {
   position: absolute;
   z-index: 4;
-  left: 65.5%;
-  top: 29.8%;
-  width: 5.2%;
+  left: 66%;
+  top: 18.3%;
+  width: 10%;
   color: #2b160b;
   text-align: center;
   font-size: clamp(15px, 2.3vw, 25px);
@@ -229,9 +245,9 @@ textarea {
 .reference-note {
   position: absolute;
   z-index: 4;
-  left: 57%;
-  top: 62.5%;
-  width: 22%;
+  left: 48%;
+  top: 57%;
+  width: 34%;
   height: 14%;
   border: 0;
   resize: none;
@@ -250,27 +266,27 @@ textarea {
 }
 
 .side-tab-1 {
-  top: 23.5%;
+  top: 11%;
 }
 
 .side-tab-2 {
-  top: 32.3%;
+  top: 20%;
 }
 
 .side-tab-3 {
-  top: 41.1%;
+  top: 29%;
 }
 
 .side-tab-4 {
-  top: 49.9%;
+  top: 38%;
 }
 
 .side-tab-5 {
-  top: 58.7%;
+  top: 47%;
 }
 
 .side-tab-6 {
-  top: 67.4%;
+  top: 56%;
 }
 
 .cellarium-dialog {

@@ -20,7 +20,6 @@ const seedBottles = [
 
 let bottles = loadBottles();
 let screen = "home";
-let previousScreen = "home";
 let selectedBottleId = bottles[0].id;
 let query = "";
 
@@ -53,7 +52,7 @@ function referenceImage(name, label) {
 
 function renderHome() {
   return `
-    <main class="reference-screen" aria-label="Accueil Cellarium">
+    <main class="reference-screen screen-home" aria-label="Accueil Cellarium">
       ${referenceImage("home", "Maquette officielle accueil Cellarium")}
       <button class="hotspot settings-hotspot" type="button" aria-label="Settings"></button>
       <button class="hotspot enter-hotspot" type="button" aria-label="Entrer dans la cave"></button>
@@ -62,18 +61,18 @@ function renderHome() {
 }
 
 function goTo(nextScreen) {
-  if (screen !== nextScreen) {
-    previousScreen = screen;
-    screen = nextScreen;
-  }
+  screen = nextScreen;
   render();
 }
 
-function goBack(fallback = "home") {
-  const destination = previousScreen && previousScreen !== screen ? previousScreen : fallback;
-  previousScreen = screen;
-  screen = destination;
-  render();
+function goBack() {
+  if (screen === "detail") {
+    goTo("cave");
+    return;
+  }
+  if (screen === "cave") {
+    goTo("home");
+  }
 }
 
 function renderCave() {
@@ -82,7 +81,7 @@ function renderCave() {
   );
 
   return `
-    <main class="reference-screen" aria-label="Cave Cellarium">
+    <main class="reference-screen screen-cave" aria-label="Cave Cellarium">
       ${referenceImage("cave", "Maquette officielle cave Cellarium")}
       <button class="screen-back" type="button" aria-label="Retour a l'ecran precedent"></button>
       <button class="hotspot settings-hotspot" type="button" aria-label="Settings"></button>
@@ -113,7 +112,7 @@ function renderDetail() {
   const bottle = selectedBottle();
 
   return `
-    <main class="reference-screen" aria-label="Fiche bouteille Cellarium">
+    <main class="reference-screen screen-detail" aria-label="Fiche bouteille Cellarium">
       ${referenceImage("detail", "Maquette officielle fiche bouteille Cellarium")}
       <button class="screen-back" type="button" aria-label="Retour a l'ecran precedent"></button>
       <button class="hotspot back-hotspot" type="button" aria-label="Retour Cave"></button>
@@ -143,7 +142,7 @@ function bindEvents() {
   });
 
   document.querySelector(".screen-back")?.addEventListener("click", () => {
-    goBack(screen === "detail" ? "cave" : "home");
+    goBack();
   });
 
   document.querySelector("#search")?.addEventListener("input", (event) => {
