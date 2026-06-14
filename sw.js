@@ -5,10 +5,7 @@ const ASSETS = [
   "./style.css",
   "./app.js",
   "./manifest.json",
-  "./icon.svg",
-  "./assets/reference/01%20ACCUEIL%20REFERENCE.PNG",
-  "./assets/reference/02%20CAVE%20REFERENCE.PNG",
-  "./assets/reference/03%20FICHE%20BOUTEILLE%20REFERENCE.PNG"
+  "./icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
