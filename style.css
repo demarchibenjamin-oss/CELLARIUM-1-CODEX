@@ -33,58 +33,48 @@ textarea {
   background: #050201;
 }
 
+.mobile-frame,
 .reference-screen {
   position: relative;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
-  background: #050201;
-  --reference-fit: cover;
-  --reference-position: center center;
-  --reference-width: 100%;
-  --reference-height: 100%;
-  --reference-top: 0;
-  --reference-left: 0;
+  background: #120705;
+  --zoom: 1;
+  --x: -50%;
+  --y: -50%;
 }
 
 .reference-bg {
   position: absolute;
-  left: var(--reference-left);
-  top: var(--reference-top);
-  width: var(--reference-width);
-  height: var(--reference-height);
-  object-fit: var(--reference-fit);
-  object-position: var(--reference-position);
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: 100dvh;
+  object-fit: contain;
+  object-position: center center;
+  transform: translate(var(--x), var(--y)) scale(var(--zoom));
   user-select: none;
   pointer-events: none;
 }
 
 .screen-home {
-  --reference-fit: cover;
-  --reference-position: center center;
-  --reference-width: 100%;
-  --reference-height: 100%;
-  --reference-top: 0;
-  --reference-left: 0;
+  --zoom: 1;
+  --x: -50%;
+  --y: -50%;
 }
 
 .screen-cave {
-  --reference-fit: cover;
-  --reference-position: center center;
-  --reference-width: 100%;
-  --reference-height: 100%;
-  --reference-top: 0;
-  --reference-left: 0;
+  --zoom: 1;
+  --x: -50%;
+  --y: -50%;
 }
 
 .screen-detail {
-  --reference-fit: cover;
-  --reference-position: center center;
-  --reference-width: 100%;
-  --reference-height: 100%;
-  --reference-top: 0;
-  --reference-left: 0;
+  --zoom: 1;
+  --x: -50%;
+  --y: -50%;
 }
 
 .hotspot {
