@@ -40,31 +40,51 @@ textarea {
   height: 100dvh;
   overflow: hidden;
   background: #050201;
-  --reference-shift: -8.1%;
-  --reference-height: 108.1%;
+  --reference-fit: cover;
+  --reference-position: center center;
+  --reference-width: 100%;
+  --reference-height: 100%;
+  --reference-top: 0;
+  --reference-left: 0;
 }
 
 .reference-bg {
   position: absolute;
-  left: 0;
-  top: var(--reference-shift);
-  width: 100%;
+  left: var(--reference-left);
+  top: var(--reference-top);
+  width: var(--reference-width);
   height: var(--reference-height);
-  object-fit: fill;
-  object-position: center;
+  object-fit: var(--reference-fit);
+  object-position: var(--reference-position);
   user-select: none;
   pointer-events: none;
 }
 
 .screen-home {
-  --reference-shift: -7.45%;
-  --reference-height: 107.45%;
+  --reference-fit: cover;
+  --reference-position: center center;
+  --reference-width: 100%;
+  --reference-height: 100%;
+  --reference-top: 0;
+  --reference-left: 0;
 }
 
-.screen-cave,
+.screen-cave {
+  --reference-fit: cover;
+  --reference-position: center center;
+  --reference-width: 100%;
+  --reference-height: 100%;
+  --reference-top: 0;
+  --reference-left: 0;
+}
+
 .screen-detail {
-  --reference-shift: -8.1%;
-  --reference-height: 108.1%;
+  --reference-fit: cover;
+  --reference-position: center center;
+  --reference-width: 100%;
+  --reference-height: 100%;
+  --reference-top: 0;
+  --reference-left: 0;
 }
 
 .hotspot {
