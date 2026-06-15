@@ -54,16 +54,22 @@ function renderHome() {
   return `
     <main class="home-screen" aria-label="Accueil Cellarium">
       <div class="home-vineyard" aria-hidden="true"></div>
+      <div class="home-vine-rows" aria-hidden="true">
+        ${Array.from({ length: 9 }, (_, index) => `<span class="home-vine-row home-vine-row-${index + 1}"></span>`).join("")}
+      </div>
       <div class="home-library" aria-hidden="true">
         ${Array.from({ length: 18 }, (_, index) => `<span class="home-book home-book-${index + 1}"></span>`).join("")}
       </div>
-      <div class="home-arch" aria-hidden="true"></div>
+      <div class="home-arch" aria-hidden="true">
+        ${Array.from({ length: 18 }, (_, index) => `<span class="home-stone home-stone-${index + 1}"></span>`).join("")}
+      </div>
       <div class="home-table" aria-hidden="true"></div>
       <div class="home-candle" aria-hidden="true"></div>
       <div class="home-glass" aria-hidden="true"></div>
       <div class="home-open-book" aria-hidden="true">
         <span class="home-page home-page-left"></span>
         <span class="home-page home-page-right"></span>
+        <span class="home-book-spine"></span>
       </div>
       <button class="home-settings settings-hotspot" type="button" aria-label="Settings"></button>
       <section class="home-brand" aria-label="Cellarium">

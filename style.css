@@ -105,8 +105,9 @@ textarea {
   overflow: hidden;
   color: #f0cf83;
   background:
-    radial-gradient(circle at 72% 34%, rgba(240, 150, 68, 0.33), transparent 24%),
-    linear-gradient(115deg, #080201 0%, #180806 44%, #3a160a 68%, #100503 100%);
+    radial-gradient(circle at 75% 33%, rgba(255, 168, 75, 0.46), transparent 18%),
+    radial-gradient(ellipse at 52% 72%, rgba(96, 42, 18, 0.58), transparent 36%),
+    linear-gradient(112deg, #050201 0%, #120503 37%, #2b0d05 58%, #0b0302 100%);
   isolation: isolate;
 }
 
@@ -116,53 +117,124 @@ textarea {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(circle at 33% 21%, rgba(205, 158, 73, 0.18), transparent 18%),
-    repeating-linear-gradient(112deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 13px);
+    radial-gradient(circle at 14% 82%, rgba(246, 174, 72, 0.28), transparent 14%),
+    radial-gradient(circle at 61% 24%, rgba(255, 218, 127, 0.18), transparent 13%),
+    repeating-radial-gradient(circle at 47% 42%, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(106deg, rgba(255, 255, 255, 0.026) 0 1px, transparent 1px 11px);
   mix-blend-mode: screen;
-  opacity: 0.42;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.home-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  background:
+    radial-gradient(ellipse at center, transparent 0 54%, rgba(0, 0, 0, 0.62) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.36), transparent 19%, transparent 78%, rgba(0, 0, 0, 0.42));
   pointer-events: none;
 }
 
 .home-vineyard {
   position: absolute;
-  z-index: 0;
-  right: -8vw;
-  top: 9dvh;
-  width: 58vw;
-  height: 56dvh;
-  border-radius: 48% 0 0 54%;
+  z-index: 1;
+  right: -11vw;
+  top: 6dvh;
+  width: 66vw;
+  height: 61dvh;
+  border-radius: 50% 0 0 55%;
   background:
-    radial-gradient(circle at 48% 24%, #ffd08b 0 8%, #d77636 18%, transparent 32%),
-    linear-gradient(165deg, transparent 0 44%, rgba(20, 45, 19, 0.88) 45% 100%),
-    repeating-linear-gradient(158deg, rgba(196, 143, 61, 0.55) 0 3px, rgba(27, 68, 28, 0.72) 3px 12px);
-  box-shadow: inset 24px 0 34px rgba(22, 9, 3, 0.78), 0 0 44px rgba(221, 128, 49, 0.22);
+    radial-gradient(circle at 42% 31%, #ffe1a2 0 5%, #f28f45 10%, rgba(126, 54, 22, 0.55) 20%, transparent 35%),
+    linear-gradient(178deg, rgba(76, 39, 21, 0.1) 0 35%, rgba(21, 54, 28, 0.75) 45% 100%),
+    radial-gradient(ellipse at 62% 75%, rgba(23, 74, 35, 0.78), rgba(6, 28, 16, 0.95) 60%, rgba(5, 10, 5, 0.95));
+  box-shadow:
+    inset 28px 0 36px rgba(18, 7, 3, 0.84),
+    inset 0 34px 42px rgba(255, 180, 86, 0.12),
+    0 0 64px rgba(221, 128, 49, 0.24);
+}
+
+.home-vine-rows {
+  position: absolute;
+  z-index: 2;
+  right: -4vw;
+  top: 25dvh;
+  width: 58vw;
+  height: 36dvh;
+  overflow: hidden;
+  border-radius: 42% 0 0 55%;
+  opacity: 0.78;
+  transform: perspective(340px) rotateX(46deg) rotateZ(-10deg);
+  transform-origin: center bottom;
+  pointer-events: none;
+}
+
+.home-vine-row {
+  position: absolute;
+  left: 7vw;
+  width: 68vw;
+  height: 1.4dvh;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(235, 170, 75, 0.45), rgba(32, 90, 38, 0.75) 35%, rgba(12, 41, 18, 0.88));
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.45);
+}
+
+.home-vine-row-1 { top: 2dvh; }
+.home-vine-row-2 { top: 5.4dvh; }
+.home-vine-row-3 { top: 8.9dvh; }
+.home-vine-row-4 { top: 12.5dvh; }
+.home-vine-row-5 { top: 16.4dvh; }
+.home-vine-row-6 { top: 20.4dvh; }
+.home-vine-row-7 { top: 24.7dvh; }
+.home-vine-row-8 { top: 29.2dvh; }
+.home-vine-row-9 { top: 34dvh; }
+
+.home-vine-row:nth-child(odd) {
+  left: 2vw;
+  transform: skewX(-12deg);
+}
+
+.home-vine-row:nth-child(even) {
+  transform: skewX(9deg);
 }
 
 .home-library {
   position: absolute;
-  z-index: 1;
-  left: -8vw;
+  z-index: 3;
+  left: -5vw;
   top: 0;
-  width: 44vw;
-  height: 78dvh;
-  padding: 10dvh 4vw 0 9vw;
+  width: 43vw;
+  height: 80dvh;
+  padding: 10dvh 4vw 0 7vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.4vw;
+  gap: 1.3vw;
   background:
-    linear-gradient(90deg, #090302, rgba(28, 11, 5, 0.95) 64%, rgba(20, 8, 3, 0.32)),
-    repeating-linear-gradient(0deg, transparent 0 13dvh, rgba(121, 68, 24, 0.52) 13dvh 14dvh);
-  box-shadow: inset -18px 0 32px rgba(0, 0, 0, 0.72);
+    linear-gradient(90deg, rgba(4, 1, 1, 0.98), rgba(24, 9, 4, 0.98) 62%, rgba(16, 6, 3, 0.44)),
+    repeating-linear-gradient(0deg, rgba(36, 17, 8, 0.6) 0 12.5dvh, rgba(112, 63, 25, 0.75) 12.5dvh 13.5dvh),
+    repeating-linear-gradient(90deg, transparent 0 11vw, rgba(109, 62, 25, 0.34) 11vw 11.8vw);
+  box-shadow:
+    inset -22px 0 34px rgba(0, 0, 0, 0.86),
+    inset 0 0 28px rgba(206, 139, 52, 0.08),
+    12px 0 28px rgba(0, 0, 0, 0.42);
 }
 
 .home-book {
   min-height: 10dvh;
-  border: 1px solid rgba(208, 152, 68, 0.28);
-  border-radius: 2px;
+  border: 1px solid rgba(213, 162, 75, 0.34);
+  border-radius: 4px 2px 3px 2px;
   background:
-    linear-gradient(90deg, rgba(255, 218, 126, 0.18), transparent 18% 82%, rgba(0, 0, 0, 0.38)),
-    linear-gradient(#2a160d, #0d0604);
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.72);
+    radial-gradient(ellipse at 48% 10%, rgba(236, 198, 112, 0.2), transparent 34%),
+    linear-gradient(90deg, rgba(255, 226, 133, 0.16), transparent 15% 80%, rgba(0, 0, 0, 0.44)),
+    repeating-linear-gradient(0deg, transparent 0 2.1dvh, rgba(218, 166, 76, 0.13) 2.1dvh 2.25dvh),
+    linear-gradient(#3a1a10, #100503);
+  box-shadow:
+    inset 0 0 14px rgba(0, 0, 0, 0.82),
+    inset 2px 0 0 rgba(238, 190, 91, 0.16),
+    0 5px 10px rgba(0, 0, 0, 0.34);
+  transform: perspective(160px) rotateY(-4deg);
 }
 
 .home-book:nth-child(3n + 1) {
@@ -179,30 +251,63 @@ textarea {
 
 .home-arch {
   position: absolute;
-  z-index: 1;
-  right: 3vw;
-  top: 5dvh;
-  width: 46vw;
-  height: 60dvh;
-  border: 7vw solid rgba(58, 42, 28, 0.78);
+  z-index: 4;
+  right: 0;
+  top: 7dvh;
+  width: 50vw;
+  height: 61dvh;
+  border: 6.4vw solid rgba(82, 59, 39, 0.72);
   border-bottom: 0;
   border-radius: 50% 50% 0 0;
-  box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.76), 0 0 24px rgba(0, 0, 0, 0.54);
-  opacity: 0.82;
+  box-shadow:
+    inset 0 0 34px rgba(0, 0, 0, 0.82),
+    inset 12px 0 16px rgba(255, 210, 135, 0.06),
+    0 0 34px rgba(0, 0, 0, 0.72);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.home-stone {
+  position: absolute;
+  width: 7vw;
+  height: 5.5dvh;
+  border-radius: 36% 42% 30% 45%;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(171, 129, 82, 0.38), transparent 42%),
+    linear-gradient(145deg, rgba(90, 66, 45, 0.8), rgba(31, 22, 16, 0.78));
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.58), 0 1px 0 rgba(231, 190, 122, 0.06);
+}
+
+.home-stone-1 { left: -5.6vw; top: 5dvh; transform: rotate(-17deg); }
+.home-stone-2 { left: -6.7vw; top: 13dvh; transform: rotate(8deg); }
+.home-stone-3 { left: -6.3vw; top: 22dvh; transform: rotate(-6deg); }
+.home-stone-4 { left: -6vw; top: 33dvh; transform: rotate(10deg); }
+.home-stone-5 { right: -5.6vw; top: 5dvh; transform: rotate(14deg); }
+.home-stone-6 { right: -6.8vw; top: 13.3dvh; transform: rotate(-10deg); }
+.home-stone-7 { right: -6.1vw; top: 23dvh; transform: rotate(6deg); }
+.home-stone-8 { right: -5.8vw; top: 34dvh; transform: rotate(-8deg); }
+.home-stone-9 { left: 5vw; top: -4.8dvh; transform: rotate(-7deg); }
+.home-stone-10 { left: 13vw; top: -6.8dvh; transform: rotate(5deg); }
+.home-stone-11 { left: 22vw; top: -7.7dvh; transform: rotate(-3deg); }
+.home-stone-12 { right: 9vw; top: -6dvh; transform: rotate(8deg); }
+.home-stone:nth-child(n + 13) {
+  display: none;
 }
 
 .home-table {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   left: -8vw;
   right: -8vw;
   bottom: -6dvh;
   height: 30dvh;
   background:
-    radial-gradient(ellipse at center, rgba(150, 86, 35, 0.7), transparent 58%),
-    repeating-linear-gradient(8deg, #2d1309 0 13px, #1b0a05 13px 28px);
+    radial-gradient(ellipse at center, rgba(156, 86, 34, 0.76), transparent 58%),
+    linear-gradient(90deg, rgba(255, 214, 125, 0.08), transparent 35% 80%, rgba(0, 0, 0, 0.3)),
+    repeating-linear-gradient(8deg, #35170b 0 9px, #1b0a05 9px 21px, #4a2110 21px 23px);
   transform: perspective(520px) rotateX(19deg);
   transform-origin: bottom;
+  box-shadow: inset 0 18px 28px rgba(0, 0, 0, 0.6);
 }
 
 .home-candle {
@@ -231,17 +336,21 @@ textarea {
 
 .home-glass {
   position: absolute;
-  z-index: 4;
+  z-index: 7;
   left: 7vw;
-  bottom: 21dvh;
-  width: 15vw;
-  height: 29dvh;
-  border: 2px solid rgba(246, 216, 144, 0.34);
-  border-top-width: 1px;
-  border-radius: 46% 46% 14% 14%;
+  bottom: 20dvh;
+  width: 14vw;
+  height: 31dvh;
+  border: 1.4px solid rgba(252, 226, 170, 0.34);
+  border-top: 1px solid rgba(255, 241, 203, 0.4);
+  border-radius: 48% 48% 18% 18%;
   background:
-    linear-gradient(to top, transparent 0 32%, rgba(106, 12, 15, 0.82) 33% 49%, transparent 50%),
-    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.22), transparent 32%);
+    radial-gradient(ellipse at 52% 33%, rgba(255, 255, 255, 0.28), transparent 18%),
+    linear-gradient(to top, transparent 0 28%, rgba(80, 5, 10, 0.92) 29% 44%, rgba(144, 25, 23, 0.9) 45% 50%, transparent 51%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 28% 72%, rgba(255, 255, 255, 0.11));
+  box-shadow:
+    inset 0 0 12px rgba(255, 255, 255, 0.08),
+    0 12px 18px rgba(0, 0, 0, 0.45);
 }
 
 .home-glass::after {
@@ -257,12 +366,13 @@ textarea {
 
 .home-open-book {
   position: absolute;
-  z-index: 5;
-  left: 31vw;
+  z-index: 7;
+  left: 29vw;
   bottom: 12dvh;
-  width: 55vw;
-  height: 20dvh;
-  filter: drop-shadow(0 18px 16px rgba(0, 0, 0, 0.62));
+  width: 59vw;
+  height: 22dvh;
+  filter: drop-shadow(0 21px 18px rgba(0, 0, 0, 0.72));
+  perspective: 360px;
 }
 
 .home-page {
@@ -271,21 +381,37 @@ textarea {
   width: 50%;
   height: 100%;
   background:
-    repeating-linear-gradient(6deg, transparent 0 11px, rgba(77, 47, 25, 0.22) 11px 12px),
-    linear-gradient(145deg, #ead7a6, #b98545);
-  border: 1px solid rgba(95, 54, 21, 0.55);
+    radial-gradient(ellipse at 50% 18%, rgba(255, 248, 207, 0.36), transparent 42%),
+    repeating-linear-gradient(7deg, transparent 0 10px, rgba(84, 55, 31, 0.22) 10px 11px),
+    linear-gradient(145deg, #ead5a4, #bd8849 72%, #76502c);
+  border: 1px solid rgba(95, 54, 21, 0.6);
+  box-shadow: inset 0 0 16px rgba(94, 55, 25, 0.42), inset 0 -10px 18px rgba(81, 44, 20, 0.3);
 }
 
 .home-page-left {
   left: 0;
   border-radius: 14% 5% 8% 12%;
-  transform: skewY(7deg) rotate(-5deg);
+  transform: rotateY(18deg) skewY(7deg) rotate(-4deg);
+  transform-origin: right center;
 }
 
 .home-page-right {
   right: 0;
   border-radius: 5% 14% 12% 8%;
-  transform: skewY(-7deg) rotate(5deg);
+  transform: rotateY(-18deg) skewY(-7deg) rotate(4deg);
+  transform-origin: left center;
+}
+
+.home-book-spine {
+  position: absolute;
+  z-index: 2;
+  left: 49%;
+  top: 2%;
+  width: 3.2%;
+  height: 103%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(73, 38, 17, 0.9), rgba(246, 210, 134, 0.18), rgba(61, 31, 14, 0.95));
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.74);
 }
 
 .home-settings {
@@ -316,13 +442,13 @@ textarea {
 }
 
 .home-logo {
-  width: min(24vw, 110px);
+  width: min(22vw, 96px);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: top center;
-  border-radius: 18%;
-  mix-blend-mode: screen;
-  filter: sepia(0.25) saturate(1.1) drop-shadow(0 0 10px rgba(230, 180, 77, 0.45));
+  border-radius: 20%;
+  opacity: 0.92;
+  filter: sepia(0.18) saturate(1.05) drop-shadow(0 0 12px rgba(230, 180, 77, 0.36));
 }
 
 .home-brand h1 {
