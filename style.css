@@ -105,9 +105,9 @@ textarea {
   overflow: hidden;
   color: #f0cf83;
   background: #050201;
-  --home-zoom: 1.08;
-  --home-x: -50%;
-  --home-y: -54%;
+  --home-zoom: 0.92;
+  --home-x: -47%;
+  --home-y: -52%;
 }
 
 .home-reference {
