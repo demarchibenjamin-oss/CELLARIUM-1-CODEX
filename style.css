@@ -104,37 +104,42 @@ textarea {
   height: 100dvh;
   overflow: hidden;
   color: #f0cf83;
-  background:
-    radial-gradient(circle at 76% 31%, rgba(255, 174, 82, 0.4), transparent 16%),
-    radial-gradient(ellipse at 52% 72%, rgba(96, 42, 18, 0.46), transparent 36%),
-    linear-gradient(112deg, #050201 0%, #120503 37%, #2b0d05 58%, #0b0302 100%);
-  isolation: isolate;
+  background: #050201;
 }
 
-.home-screen::before {
-  content: "";
+.home-reference-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 14% 82%, rgba(246, 174, 72, 0.28), transparent 14%),
-    radial-gradient(circle at 61% 24%, rgba(255, 218, 127, 0.18), transparent 13%),
-    repeating-radial-gradient(circle at 47% 42%, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 4px),
-    repeating-linear-gradient(106deg, rgba(255, 255, 255, 0.026) 0 1px, transparent 1px 11px);
-  mix-blend-mode: screen;
-  opacity: 0.55;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  user-select: none;
   pointer-events: none;
 }
 
-.home-screen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 9;
-  background:
-    radial-gradient(ellipse at center, transparent 0 54%, rgba(0, 0, 0, 0.62) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.36), transparent 19%, transparent 78%, rgba(0, 0, 0, 0.42));
-  pointer-events: none;
+.home-reference-screen .home-settings {
+  left: 2.2%;
+  top: 8.8%;
+  width: 8%;
+  height: 8%;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-reference-screen .home-enter {
+  left: 26%;
+  right: 26%;
+  bottom: 5.7%;
+  min-height: 8.2%;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
 }
 
 .home-vineyard {
