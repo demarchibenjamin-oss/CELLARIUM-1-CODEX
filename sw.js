@@ -1,15 +1,15 @@
-const CACHE_NAME = "cellarium-reference-v19-cache";
+const CACHE_NAME = "cellarium-v21-cache";
 const ASSETS = [
   "./",
   "./index.html",
   "./style.css",
-  "./style.css?v=2",
+  "./style.css?v=21",
   "./app.js",
-  "./app.js?v=2",
+  "./app.js?v=21",
   "./manifest.json",
-  "./manifest.json?v=2",
+  "./manifest.json?v=21",
   "./icon.png",
-  "./icon.png?v=2",
+  "./icon.png?v=21",
   "./assets/reference/01-accueil-reference.png",
   "./assets/reference/02-cave-reference.png",
   "./assets/reference/03-fiche-bouteille-reference.png"
