@@ -58,7 +58,7 @@ function renderHome() {
         ${Array.from({ length: 9 }, (_, index) => `<span class="home-vine-row home-vine-row-${index + 1}"></span>`).join("")}
       </div>
       <div class="home-library" aria-hidden="true">
-        ${Array.from({ length: 18 }, (_, index) => `<span class="home-book home-book-${index + 1}"></span>`).join("")}
+        ${Array.from({ length: 42 }, (_, index) => `<span class="home-book home-book-${index + 1}"></span>`).join("")}
       </div>
       <div class="home-arch" aria-hidden="true">
         ${Array.from({ length: 18 }, (_, index) => `<span class="home-stone home-stone-${index + 1}"></span>`).join("")}
@@ -73,7 +73,7 @@ function renderHome() {
       </div>
       <button class="home-settings settings-hotspot" type="button" aria-label="Settings"></button>
       <section class="home-brand" aria-label="Cellarium">
-        <img class="home-logo" src="icon.png" alt="">
+        <span class="home-logo-mark" aria-hidden="true"></span>
         <h1>CELLARIUM</h1>
         <p>Bibliotheque du gout et du temps</p>
       </section>

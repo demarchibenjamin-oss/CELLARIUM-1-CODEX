@@ -105,8 +105,8 @@ textarea {
   overflow: hidden;
   color: #f0cf83;
   background:
-    radial-gradient(circle at 75% 33%, rgba(255, 168, 75, 0.46), transparent 18%),
-    radial-gradient(ellipse at 52% 72%, rgba(96, 42, 18, 0.58), transparent 36%),
+    radial-gradient(circle at 76% 31%, rgba(255, 174, 82, 0.4), transparent 16%),
+    radial-gradient(ellipse at 52% 72%, rgba(96, 42, 18, 0.46), transparent 36%),
     linear-gradient(112deg, #050201 0%, #120503 37%, #2b0d05 58%, #0b0302 100%);
   isolation: isolate;
 }
@@ -140,15 +140,18 @@ textarea {
 .home-vineyard {
   position: absolute;
   z-index: 1;
-  right: -11vw;
-  top: 6dvh;
-  width: 66vw;
-  height: 61dvh;
+  right: -8vw;
+  top: 7dvh;
+  width: 61vw;
+  height: 58dvh;
   border-radius: 50% 0 0 55%;
   background:
-    radial-gradient(circle at 42% 31%, #ffe1a2 0 5%, #f28f45 10%, rgba(126, 54, 22, 0.55) 20%, transparent 35%),
-    linear-gradient(178deg, rgba(76, 39, 21, 0.1) 0 35%, rgba(21, 54, 28, 0.75) 45% 100%),
-    radial-gradient(ellipse at 62% 75%, rgba(23, 74, 35, 0.78), rgba(6, 28, 16, 0.95) 60%, rgba(5, 10, 5, 0.95));
+    radial-gradient(circle at 41% 25%, #ffe4ac 0 4%, #f29a50 9%, rgba(117, 50, 21, 0.36) 20%, transparent 34%),
+    linear-gradient(180deg, rgba(244, 160, 79, 0.32) 0 18%, rgba(77, 53, 31, 0.36) 18% 31%, transparent 32%),
+    radial-gradient(ellipse at 55% 35%, rgba(52, 40, 30, 0.95) 0 11%, transparent 12%),
+    radial-gradient(ellipse at 68% 39%, rgba(36, 50, 33, 0.86) 0 18%, transparent 19%),
+    linear-gradient(178deg, rgba(76, 39, 21, 0.08) 0 38%, rgba(27, 68, 34, 0.52) 45% 100%),
+    radial-gradient(ellipse at 62% 75%, rgba(22, 67, 32, 0.58), rgba(6, 28, 16, 0.86) 60%, rgba(5, 10, 5, 0.92));
   box-shadow:
     inset 28px 0 36px rgba(18, 7, 3, 0.84),
     inset 0 34px 42px rgba(255, 180, 86, 0.12),
@@ -158,14 +161,14 @@ textarea {
 .home-vine-rows {
   position: absolute;
   z-index: 2;
-  right: -4vw;
-  top: 25dvh;
-  width: 58vw;
-  height: 36dvh;
+  right: -1vw;
+  top: 28dvh;
+  width: 52vw;
+  height: 31dvh;
   overflow: hidden;
   border-radius: 42% 0 0 55%;
-  opacity: 0.78;
-  transform: perspective(340px) rotateX(46deg) rotateZ(-10deg);
+  opacity: 0.52;
+  transform: perspective(420px) rotateX(58deg) rotateZ(-12deg);
   transform-origin: center bottom;
   pointer-events: none;
 }
@@ -173,12 +176,12 @@ textarea {
 .home-vine-row {
   position: absolute;
   left: 7vw;
-  width: 68vw;
-  height: 1.4dvh;
+  width: 64vw;
+  height: 0.55dvh;
   border-radius: 999px;
   background:
-    linear-gradient(90deg, rgba(235, 170, 75, 0.45), rgba(32, 90, 38, 0.75) 35%, rgba(12, 41, 18, 0.88));
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.45);
+    linear-gradient(90deg, rgba(229, 169, 77, 0.36), rgba(34, 92, 39, 0.56) 35%, rgba(12, 41, 18, 0.72));
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.38);
 }
 
 .home-vine-row-1 { top: 2dvh; }
@@ -203,14 +206,15 @@ textarea {
 .home-library {
   position: absolute;
   z-index: 3;
-  left: -5vw;
+  left: -4vw;
   top: 0;
-  width: 43vw;
+  width: 39vw;
   height: 80dvh;
-  padding: 10dvh 4vw 0 7vw;
+  padding: 9dvh 2vw 0 5vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.3vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 6.7dvh;
+  gap: 0.45vw;
   background:
     linear-gradient(90deg, rgba(4, 1, 1, 0.98), rgba(24, 9, 4, 0.98) 62%, rgba(16, 6, 3, 0.44)),
     repeating-linear-gradient(0deg, rgba(36, 17, 8, 0.6) 0 12.5dvh, rgba(112, 63, 25, 0.75) 12.5dvh 13.5dvh),
@@ -222,19 +226,44 @@ textarea {
 }
 
 .home-book {
-  min-height: 10dvh;
-  border: 1px solid rgba(213, 162, 75, 0.34);
+  min-height: 0;
+  height: 100%;
+  border: 1px solid rgba(213, 162, 75, 0.25);
   border-radius: 4px 2px 3px 2px;
   background:
     radial-gradient(ellipse at 48% 10%, rgba(236, 198, 112, 0.2), transparent 34%),
     linear-gradient(90deg, rgba(255, 226, 133, 0.16), transparent 15% 80%, rgba(0, 0, 0, 0.44)),
-    repeating-linear-gradient(0deg, transparent 0 2.1dvh, rgba(218, 166, 76, 0.13) 2.1dvh 2.25dvh),
+    repeating-linear-gradient(0deg, transparent 0 1.45dvh, rgba(218, 166, 76, 0.12) 1.45dvh 1.55dvh),
     linear-gradient(#3a1a10, #100503);
   box-shadow:
     inset 0 0 14px rgba(0, 0, 0, 0.82),
     inset 2px 0 0 rgba(238, 190, 91, 0.16),
     0 5px 10px rgba(0, 0, 0, 0.34);
   transform: perspective(160px) rotateY(-4deg);
+}
+
+.home-book::before,
+.home-book::after {
+  content: "";
+  display: block;
+  width: 42%;
+  height: 1px;
+  margin: 1.15dvh auto 0;
+  background: rgba(232, 176, 77, 0.42);
+  box-shadow: 0 1.8dvh 0 rgba(232, 176, 77, 0.2), 0 3.7dvh 0 rgba(232, 176, 77, 0.16);
+}
+
+.home-book:nth-child(4n) {
+  transform: perspective(160px) rotateY(-7deg) translateY(0.7dvh);
+}
+
+.home-book:nth-child(5n) {
+  height: 88%;
+  align-self: end;
+}
+
+.home-book:nth-child(7n) {
+  height: 112%;
 }
 
 .home-book:nth-child(3n + 1) {
@@ -252,18 +281,20 @@ textarea {
 .home-arch {
   position: absolute;
   z-index: 4;
-  right: 0;
-  top: 7dvh;
-  width: 50vw;
-  height: 61dvh;
-  border: 6.4vw solid rgba(82, 59, 39, 0.72);
+  right: -3vw;
+  top: 8dvh;
+  width: 46vw;
+  height: 59dvh;
+  border: 4.4vw solid rgba(73, 55, 38, 0.62);
   border-bottom: 0;
   border-radius: 50% 50% 0 0;
   box-shadow:
     inset 0 0 34px rgba(0, 0, 0, 0.82),
     inset 12px 0 16px rgba(255, 210, 135, 0.06),
     0 0 34px rgba(0, 0, 0, 0.72);
-  opacity: 0.9;
+  background:
+    repeating-radial-gradient(circle at 42% 24%, rgba(163, 121, 79, 0.12) 0 2px, transparent 2px 9px);
+  opacity: 0.72;
   pointer-events: none;
 }
 
@@ -276,6 +307,7 @@ textarea {
     radial-gradient(circle at 35% 25%, rgba(171, 129, 82, 0.38), transparent 42%),
     linear-gradient(145deg, rgba(90, 66, 45, 0.8), rgba(31, 22, 16, 0.78));
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.58), 0 1px 0 rgba(231, 190, 122, 0.06);
+  opacity: 0.18;
 }
 
 .home-stone-1 { left: -5.6vw; top: 5dvh; transform: rotate(-17deg); }
@@ -337,16 +369,16 @@ textarea {
 .home-glass {
   position: absolute;
   z-index: 7;
-  left: 7vw;
-  bottom: 20dvh;
-  width: 14vw;
-  height: 31dvh;
-  border: 1.4px solid rgba(252, 226, 170, 0.34);
+  left: 8vw;
+  bottom: 23dvh;
+  width: 10.5vw;
+  height: 25dvh;
+  border: 1px solid rgba(252, 226, 170, 0.28);
   border-top: 1px solid rgba(255, 241, 203, 0.4);
   border-radius: 48% 48% 18% 18%;
   background:
     radial-gradient(ellipse at 52% 33%, rgba(255, 255, 255, 0.28), transparent 18%),
-    linear-gradient(to top, transparent 0 28%, rgba(80, 5, 10, 0.92) 29% 44%, rgba(144, 25, 23, 0.9) 45% 50%, transparent 51%),
+    radial-gradient(ellipse at 50% 57%, rgba(126, 13, 17, 0.92) 0 22%, rgba(64, 5, 8, 0.88) 42%, transparent 44%),
     linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 28% 72%, rgba(255, 255, 255, 0.11));
   box-shadow:
     inset 0 0 12px rgba(255, 255, 255, 0.08),
@@ -357,22 +389,22 @@ textarea {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -11dvh;
+  bottom: -9dvh;
   width: 2px;
-  height: 12dvh;
+  height: 10dvh;
   background: rgba(238, 202, 129, 0.44);
-  box-shadow: -5vw 12dvh 0 1px rgba(238, 202, 129, 0.28), 5vw 12dvh 0 1px rgba(238, 202, 129, 0.28);
+  box-shadow: -3.7vw 10dvh 0 1px rgba(238, 202, 129, 0.22), 3.7vw 10dvh 0 1px rgba(238, 202, 129, 0.22);
 }
 
 .home-open-book {
   position: absolute;
   z-index: 7;
-  left: 29vw;
-  bottom: 12dvh;
-  width: 59vw;
-  height: 22dvh;
+  left: 35vw;
+  bottom: 16dvh;
+  width: 48vw;
+  height: 15dvh;
   filter: drop-shadow(0 21px 18px rgba(0, 0, 0, 0.72));
-  perspective: 360px;
+  perspective: 430px;
 }
 
 .home-page {
@@ -382,7 +414,7 @@ textarea {
   height: 100%;
   background:
     radial-gradient(ellipse at 50% 18%, rgba(255, 248, 207, 0.36), transparent 42%),
-    repeating-linear-gradient(7deg, transparent 0 10px, rgba(84, 55, 31, 0.22) 10px 11px),
+    repeating-linear-gradient(5deg, transparent 0 7px, rgba(84, 55, 31, 0.2) 7px 8px),
     linear-gradient(145deg, #ead5a4, #bd8849 72%, #76502c);
   border: 1px solid rgba(95, 54, 21, 0.6);
   box-shadow: inset 0 0 16px rgba(94, 55, 25, 0.42), inset 0 -10px 18px rgba(81, 44, 20, 0.3);
@@ -391,14 +423,14 @@ textarea {
 .home-page-left {
   left: 0;
   border-radius: 14% 5% 8% 12%;
-  transform: rotateY(18deg) skewY(7deg) rotate(-4deg);
+  transform: rotateX(11deg) rotateY(21deg) skewY(5deg) rotate(-5deg);
   transform-origin: right center;
 }
 
 .home-page-right {
   right: 0;
   border-radius: 5% 14% 12% 8%;
-  transform: rotateY(-18deg) skewY(-7deg) rotate(4deg);
+  transform: rotateX(11deg) rotateY(-21deg) skewY(-5deg) rotate(5deg);
   transform-origin: left center;
 }
 
@@ -441,20 +473,38 @@ textarea {
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.92);
 }
 
-.home-logo {
-  width: min(22vw, 96px);
+.home-logo-mark {
+  position: relative;
+  display: inline-block;
+  width: min(14vw, 62px);
   aspect-ratio: 1;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 20%;
-  opacity: 0.92;
-  filter: sepia(0.18) saturate(1.05) drop-shadow(0 0 12px rgba(230, 180, 77, 0.36));
+  border: 2px solid rgba(238, 194, 93, 0.95);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px rgba(232, 177, 75, 0.36));
+}
+
+.home-logo-mark::before,
+.home-logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  background:
+    conic-gradient(from 0deg, transparent 0 7%, #f0cf83 7% 10%, transparent 10% 24%, #f0cf83 24% 27%, transparent 27% 49%, #f0cf83 49% 52%, transparent 52% 74%, #f0cf83 74% 77%, transparent 77% 100%);
+  clip-path: polygon(50% 0, 57% 38%, 100% 50%, 57% 62%, 50% 100%, 43% 62%, 0 50%, 43% 38%);
+}
+
+.home-logo-mark::after {
+  inset: 41%;
+  border: 1px solid rgba(238, 194, 93, 0.95);
+  border-radius: 50%;
+  background: rgba(238, 194, 93, 0.86);
+  clip-path: none;
 }
 
 .home-brand h1 {
-  margin: -1dvh 0 0;
+  margin: 0.4dvh 0 0;
   color: #efc879;
-  font-size: clamp(2.6rem, 13vw, 5.4rem);
+  font-size: clamp(2.25rem, 10.8vw, 4.7rem);
   font-weight: 500;
   line-height: 0.95;
 }
@@ -468,14 +518,14 @@ textarea {
 .home-quote {
   position: absolute;
   z-index: 6;
-  left: 14vw;
-  right: 10vw;
-  top: 33dvh;
+  left: 18vw;
+  right: 11vw;
+  top: 31dvh;
   margin: 0;
   color: #edcf8b;
   text-align: center;
-  font-size: clamp(1rem, 4.2vw, 1.55rem);
-  line-height: 1.52;
+  font-size: clamp(0.82rem, 3.2vw, 1.15rem);
+  line-height: 1.42;
   text-shadow: 0 3px 8px #000;
 }
 
@@ -492,19 +542,21 @@ textarea {
 .home-enter {
   position: absolute;
   z-index: 8;
-  left: 10vw;
-  right: 10vw;
+  left: 14vw;
+  right: 14vw;
   bottom: max(3dvh, env(safe-area-inset-bottom));
-  min-height: 8dvh;
-  padding: 0 6vw;
+  min-height: 6.2dvh;
+  padding: 0 4vw;
   color: #2a1508;
   border: 1px solid rgba(98, 52, 18, 0.75);
-  border-radius: 999px 18px 999px 18px;
+  border-radius: 18px 12px 18px 12px;
   background:
-    linear-gradient(90deg, rgba(122, 73, 26, 0.28), transparent 18% 82%, rgba(122, 73, 26, 0.28)),
+    radial-gradient(circle at 22% 34%, rgba(255, 238, 178, 0.42), transparent 32%),
+    repeating-linear-gradient(96deg, rgba(95, 55, 22, 0.08) 0 2px, transparent 2px 9px),
+    linear-gradient(90deg, rgba(122, 73, 26, 0.22), transparent 18% 82%, rgba(122, 73, 26, 0.22)),
     linear-gradient(#eed391, #b37b35);
-  box-shadow: inset 0 0 0 2px rgba(241, 208, 125, 0.45), 0 12px 22px rgba(0, 0, 0, 0.55);
-  font-size: clamp(1.05rem, 5vw, 1.55rem);
+  box-shadow: inset 0 0 0 2px rgba(241, 208, 125, 0.36), 0 8px 16px rgba(0, 0, 0, 0.48);
+  font-size: clamp(0.92rem, 4vw, 1.25rem);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
