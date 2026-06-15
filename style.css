@@ -140,14 +140,14 @@ textarea {
 .home-vineyard {
   position: absolute;
   z-index: 1;
-  right: -8vw;
-  top: 7dvh;
-  width: 61vw;
-  height: 58dvh;
+  right: -10vw;
+  top: 13dvh;
+  width: 54vw;
+  height: 44dvh;
   border-radius: 50% 0 0 55%;
   background:
-    radial-gradient(circle at 41% 25%, #ffe4ac 0 4%, #f29a50 9%, rgba(117, 50, 21, 0.36) 20%, transparent 34%),
-    linear-gradient(180deg, rgba(244, 160, 79, 0.32) 0 18%, rgba(77, 53, 31, 0.36) 18% 31%, transparent 32%),
+    radial-gradient(circle at 38% 24%, #ffe4ac 0 4%, #f29a50 9%, rgba(117, 50, 21, 0.36) 20%, transparent 34%),
+    linear-gradient(180deg, rgba(244, 160, 79, 0.4) 0 21%, rgba(77, 53, 31, 0.36) 21% 34%, transparent 35%),
     radial-gradient(ellipse at 55% 35%, rgba(52, 40, 30, 0.95) 0 11%, transparent 12%),
     radial-gradient(ellipse at 68% 39%, rgba(36, 50, 33, 0.86) 0 18%, transparent 19%),
     linear-gradient(178deg, rgba(76, 39, 21, 0.08) 0 38%, rgba(27, 68, 34, 0.52) 45% 100%),
@@ -162,9 +162,9 @@ textarea {
   position: absolute;
   z-index: 2;
   right: -1vw;
-  top: 28dvh;
-  width: 52vw;
-  height: 31dvh;
+  top: 31dvh;
+  width: 47vw;
+  height: 24dvh;
   overflow: hidden;
   border-radius: 42% 0 0 55%;
   opacity: 0.52;
@@ -208,12 +208,12 @@ textarea {
   z-index: 3;
   left: -4vw;
   top: 0;
-  width: 39vw;
-  height: 80dvh;
-  padding: 9dvh 2vw 0 5vw;
+  width: 36vw;
+  height: 69dvh;
+  padding: 7dvh 2vw 0 4vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 6.7dvh;
+  grid-auto-rows: 5.45dvh;
   gap: 0.45vw;
   background:
     linear-gradient(90deg, rgba(4, 1, 1, 0.98), rgba(24, 9, 4, 0.98) 62%, rgba(16, 6, 3, 0.44)),
@@ -281,11 +281,11 @@ textarea {
 .home-arch {
   position: absolute;
   z-index: 4;
-  right: -3vw;
-  top: 8dvh;
-  width: 46vw;
-  height: 59dvh;
-  border: 4.4vw solid rgba(73, 55, 38, 0.62);
+  right: 2vw;
+  top: 10dvh;
+  width: 39vw;
+  height: 45dvh;
+  border: 3.4vw solid rgba(73, 55, 38, 0.58);
   border-bottom: 0;
   border-radius: 50% 50% 0 0;
   box-shadow:
@@ -331,8 +331,8 @@ textarea {
   z-index: 5;
   left: -8vw;
   right: -8vw;
-  bottom: -6dvh;
-  height: 30dvh;
+  bottom: -4dvh;
+  height: 27dvh;
   background:
     radial-gradient(ellipse at center, rgba(156, 86, 34, 0.76), transparent 58%),
     linear-gradient(90deg, rgba(255, 214, 125, 0.08), transparent 35% 80%, rgba(0, 0, 0, 0.3)),
@@ -345,10 +345,10 @@ textarea {
 .home-candle {
   position: absolute;
   z-index: 4;
-  left: 17vw;
-  bottom: 26dvh;
-  width: 2.4vw;
-  height: 8dvh;
+  left: 18vw;
+  bottom: 24dvh;
+  width: 2vw;
+  height: 6.6dvh;
   border-radius: 999px;
   background: linear-gradient(#f5dca0, #7b3f18);
   box-shadow: 0 -18px 28px #f19a35, 0 0 34px rgba(238, 148, 47, 0.72);
@@ -369,10 +369,10 @@ textarea {
 .home-glass {
   position: absolute;
   z-index: 7;
-  left: 8vw;
+  left: 10vw;
   bottom: 23dvh;
-  width: 10.5vw;
-  height: 25dvh;
+  width: 9vw;
+  height: 22dvh;
   border: 1px solid rgba(252, 226, 170, 0.28);
   border-top: 1px solid rgba(255, 241, 203, 0.4);
   border-radius: 48% 48% 18% 18%;
@@ -396,13 +396,50 @@ textarea {
   box-shadow: -3.7vw 10dvh 0 1px rgba(238, 202, 129, 0.22), 3.7vw 10dvh 0 1px rgba(238, 202, 129, 0.22);
 }
 
+.home-grapes {
+  position: absolute;
+  z-index: 6;
+  right: 9vw;
+  bottom: 20dvh;
+  width: 18vw;
+  height: 14dvh;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.62));
+}
+
+.home-grape {
+  position: absolute;
+  width: 4.8vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 27%, rgba(255, 227, 178, 0.36), transparent 17%),
+    radial-gradient(circle at 60% 68%, #17100f, #2a1027 48%, #080304 100%);
+  box-shadow: inset -5px -7px 9px rgba(0, 0, 0, 0.55);
+}
+
+.home-grape-1 { left: 4vw; top: 0; }
+.home-grape-2 { left: 8vw; top: 1dvh; }
+.home-grape-3 { left: 2vw; top: 2.2dvh; }
+.home-grape-4 { left: 6vw; top: 3dvh; }
+.home-grape-5 { left: 10vw; top: 3.4dvh; }
+.home-grape-6 { left: 0; top: 5dvh; }
+.home-grape-7 { left: 4vw; top: 5.5dvh; }
+.home-grape-8 { left: 8vw; top: 6dvh; }
+.home-grape-9 { left: 12vw; top: 6.3dvh; }
+.home-grape-10 { left: 2vw; top: 8dvh; }
+.home-grape-11 { left: 6vw; top: 8.4dvh; }
+.home-grape-12 { left: 10vw; top: 8.8dvh; }
+.home-grape-13 { left: 4vw; top: 10.6dvh; }
+.home-grape-14 { left: 8vw; top: 11dvh; }
+.home-grape:nth-child(n + 15) { display: none; }
+
 .home-open-book {
   position: absolute;
   z-index: 7;
-  left: 35vw;
-  bottom: 16dvh;
-  width: 48vw;
-  height: 15dvh;
+  left: 29vw;
+  bottom: 15dvh;
+  width: 44vw;
+  height: 13dvh;
   filter: drop-shadow(0 21px 18px rgba(0, 0, 0, 0.72));
   perspective: 430px;
 }
@@ -466,9 +503,9 @@ textarea {
 .home-brand {
   position: absolute;
   z-index: 6;
-  left: 12vw;
-  right: 7vw;
-  top: 10dvh;
+  left: 20vw;
+  right: 13vw;
+  top: 8.8dvh;
   text-align: center;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.92);
 }
@@ -476,7 +513,7 @@ textarea {
 .home-logo-mark {
   position: relative;
   display: inline-block;
-  width: min(14vw, 62px);
+  width: min(9vw, 42px);
   aspect-ratio: 1;
   border: 2px solid rgba(238, 194, 93, 0.95);
   border-radius: 50%;
@@ -504,7 +541,7 @@ textarea {
 .home-brand h1 {
   margin: 0.4dvh 0 0;
   color: #efc879;
-  font-size: clamp(2.25rem, 10.8vw, 4.7rem);
+  font-size: clamp(1.85rem, 8.2vw, 3.65rem);
   font-weight: 500;
   line-height: 0.95;
 }
@@ -512,20 +549,20 @@ textarea {
 .home-brand p {
   margin: 0.5dvh 0 0;
   color: #d5ad63;
-  font-size: clamp(0.82rem, 3.2vw, 1.15rem);
+  font-size: clamp(0.62rem, 2.45vw, 0.95rem);
 }
 
 .home-quote {
   position: absolute;
   z-index: 6;
-  left: 18vw;
-  right: 11vw;
-  top: 31dvh;
+  left: 25vw;
+  right: 18vw;
+  top: 25dvh;
   margin: 0;
   color: #edcf8b;
   text-align: center;
-  font-size: clamp(0.82rem, 3.2vw, 1.15rem);
-  line-height: 1.42;
+  font-size: clamp(0.66rem, 2.55vw, 0.92rem);
+  line-height: 1.38;
   text-shadow: 0 3px 8px #000;
 }
 
@@ -542,10 +579,10 @@ textarea {
 .home-enter {
   position: absolute;
   z-index: 8;
-  left: 14vw;
-  right: 14vw;
-  bottom: max(3dvh, env(safe-area-inset-bottom));
-  min-height: 6.2dvh;
+  left: 23vw;
+  right: 23vw;
+  bottom: max(4dvh, env(safe-area-inset-bottom));
+  min-height: 5.2dvh;
   padding: 0 4vw;
   color: #2a1508;
   border: 1px solid rgba(98, 52, 18, 0.75);
@@ -556,7 +593,7 @@ textarea {
     linear-gradient(90deg, rgba(122, 73, 26, 0.22), transparent 18% 82%, rgba(122, 73, 26, 0.22)),
     linear-gradient(#eed391, #b37b35);
   box-shadow: inset 0 0 0 2px rgba(241, 208, 125, 0.36), 0 8px 16px rgba(0, 0, 0, 0.48);
-  font-size: clamp(0.92rem, 4vw, 1.25rem);
+  font-size: clamp(0.72rem, 3.05vw, 1rem);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;

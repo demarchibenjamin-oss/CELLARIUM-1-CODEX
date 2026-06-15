@@ -66,6 +66,9 @@ function renderHome() {
       <div class="home-table" aria-hidden="true"></div>
       <div class="home-candle" aria-hidden="true"></div>
       <div class="home-glass" aria-hidden="true"></div>
+      <div class="home-grapes" aria-hidden="true">
+        ${Array.from({ length: 18 }, (_, index) => `<span class="home-grape home-grape-${index + 1}"></span>`).join("")}
+      </div>
       <div class="home-open-book" aria-hidden="true">
         <span class="home-page home-page-left"></span>
         <span class="home-page home-page-right"></span>
