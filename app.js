@@ -53,7 +53,9 @@ function referenceImage(name, label) {
 function renderHome() {
   return `
     <main class="home-screen home-reference-screen" aria-label="Accueil Cellarium">
-      <img class="home-reference-bg" src="${references.home}" alt="Accueil Cellarium" draggable="false">
+      <div class="home-reference" aria-hidden="true">
+        <img class="home-reference-bg" src="${references.home}" alt="" draggable="false">
+      </div>
       <button class="home-settings settings-hotspot" type="button" aria-label="Settings"></button>
       <button class="home-enter enter-hotspot" type="button" aria-label="Entrer dans la cave"></button>
     </main>
