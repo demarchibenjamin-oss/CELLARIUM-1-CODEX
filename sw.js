@@ -1,4 +1,4 @@
-const CACHE_NAME = "cellarium-reference-v11-cache";
+const CACHE_NAME = "cellarium-reference-v12-cache";
 const ASSETS = [
   "./",
   "./index.html",

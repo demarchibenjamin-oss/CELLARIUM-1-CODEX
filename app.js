@@ -52,10 +52,30 @@ function referenceImage(name, label) {
 
 function renderHome() {
   return `
-    <main class="reference-screen screen-home" aria-label="Accueil Cellarium">
-      ${referenceImage("home", "Maquette officielle accueil Cellarium")}
-      <button class="hotspot settings-hotspot" type="button" aria-label="Settings"></button>
-      <button class="hotspot enter-hotspot" type="button" aria-label="Entrer dans la cave"></button>
+    <main class="home-screen" aria-label="Accueil Cellarium">
+      <div class="home-vineyard" aria-hidden="true"></div>
+      <div class="home-library" aria-hidden="true">
+        ${Array.from({ length: 18 }, (_, index) => `<span class="home-book home-book-${index + 1}"></span>`).join("")}
+      </div>
+      <div class="home-arch" aria-hidden="true"></div>
+      <div class="home-table" aria-hidden="true"></div>
+      <div class="home-candle" aria-hidden="true"></div>
+      <div class="home-glass" aria-hidden="true"></div>
+      <div class="home-open-book" aria-hidden="true">
+        <span class="home-page home-page-left"></span>
+        <span class="home-page home-page-right"></span>
+      </div>
+      <button class="home-settings settings-hotspot" type="button" aria-label="Settings"></button>
+      <section class="home-brand" aria-label="Cellarium">
+        <img class="home-logo" src="icon.png" alt="">
+        <h1>CELLARIUM</h1>
+        <p>Bibliotheque du gout et du temps</p>
+      </section>
+      <blockquote class="home-quote">
+        <p>"Le veritable voyage<br>ne consiste pas a chercher<br>de nouveaux paysages<br>mais a avoir de nouveaux yeux."</p>
+        <cite>Marcel Proust</cite>
+      </blockquote>
+      <button class="home-enter enter-hotspot" type="button">Entrer dans la cave</button>
     </main>
   `;
 }
